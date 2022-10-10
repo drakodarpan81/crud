@@ -1,0 +1,15 @@
+{{define "New"}}
+    {{template "Header"}}
+        {{template "Menu"}}
+
+<h2>Crear Nuevo registro</h2>
+<form action="insert" method="POST">
+    <label>Nombre</label><input type="text" class="form-control" name="nombre">
+    <label>Cargo</label><input type="text" class="form-control" name="cargo">
+    <label>Salario</label><input type="number" class="form-control" name="salario">
+
+    <input type="submit" value="Crear empleado" class="btn btn-success">
+</form>
+
+{{template "Footer"}}
+{{end}}

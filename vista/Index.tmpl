@@ -1,0 +1,35 @@
+{{define "Index"}}
+{{template "Header"}}
+{{template "Menu"}}
+<h2>Lista de empleados</h2>
+<div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Cargo</th>
+                <th>Salario</th>
+                <th colspan="3" class="text-center">Operaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .}}
+
+            <tr>
+                <td>{{.Id}}</td>
+                <td>{{.Nombre}}</td>
+                <td>{{.Cargo}}</td>
+                <td>{{.Salario}}</td>
+                <td><a href="/show?id={{.Id}}">Ver información</a></td>
+                <td><a href="/edit?id={{.Id}}">Editar información</a></td>
+                <td><a href="/delete?id={{.Id}}">Eliminar información</a></td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</div>
+
+{{template "Footer"}}
+
+{{end}}

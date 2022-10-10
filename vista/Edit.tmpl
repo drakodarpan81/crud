@@ -1,0 +1,15 @@
+{{define "Edit"}}
+    {{template "Header"}}
+        {{template "Menu"}}
+
+<form action="update" method="post">
+    <input type="hidden" name="uid" value="{{.Id}}">
+    <label>Nombre</label><input type="text" name="nombre" class="form-control" value="{{.Nombre}}">
+    <label>Cargo</label><input type="text" name="cargo" class="form-control" value="{{.Cargo}}">
+    <label>Salario</label><input type="number" name="salario" class="form-control" value="{{.Salario}}">
+
+    <input type="submit" value="Actualizar empleado" class="btn btn-success">
+</form>
+
+    {{template "Footer"}}
+{{end}}

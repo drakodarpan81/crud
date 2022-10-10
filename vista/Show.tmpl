@@ -1,0 +1,20 @@
+{{define "Show"}}
+    {{template "Header"}}
+        {{template "Menu"}}
+
+<h2>Registro de empleados</h2>
+
+<p></p>
+<p><legend>Código: {{.Id}}</legend></p>
+<p><legend>Nombre: {{.Nombre}}</legend></p>
+<p><legend>Cargo: {{.Cargo}}</legend></p>
+<p><legend>Salario: {{.Salario}}</legend></p>
+
+<p>
+    <a href="/edit?id={{.Id}}">
+        <button type="button" class="btn btn-info">Editar registro</button>
+    </a>
+</p>
+
+    {{template "Footer"}}
+{{end}}
